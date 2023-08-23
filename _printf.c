@@ -44,7 +44,13 @@ int _printf(const char *format, ...)
 			_putchar('%'); /* Outputs a literal '%' character */
 			u++;
 		}
-		r_va += 1;
+		else if ((format[u+1] == 'd') || (format[u+1] == 'i'))
+		{
+			gt_int(va_arg(args, int));
+			u++;
+		}
+		 r_va += 1;
+
 	}
 	va_end(args);
 	return (r_va);

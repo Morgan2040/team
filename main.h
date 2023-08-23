@@ -9,5 +9,6 @@
 int _putchar(char chr);
 int _put_string(char *string);
 int _printf(const char *format, ...);
+void gt_int(int numb);
 
 #endif /* MAIN_H */
